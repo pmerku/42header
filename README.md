@@ -15,6 +15,17 @@ Codam (Amsterdam)
 Copy `stdheader.vim` in your `~/.vim/plugin`, or use your favorite plugin
 manager. Then set the user, mail and school variables as explained below.
 
+To install with `Vundle` place this in your `.vimrc`:
+```
+Plugin 'pmerku/42header'
+```
+then run the following in Vim:
+```
+:source %
+:PluginInstall
+```
+
+
 #### Option 1: export USER, MAIL and SCHOOL in your shell configuration file
 
 Add in `~/.zshrc` your:
@@ -23,7 +34,7 @@ Add in `~/.zshrc` your:
 + `MAIL`
 + `SCHOOL`
 
-#### Option 2: set user, mail and school values directly in your vimrc
+#### Option 2: set user, mail and school values directly in your `vimrc`
 
 ```vim
 let g:user42 = 'yourLogin'
