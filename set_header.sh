@@ -3,6 +3,21 @@
 
 # Set variables
 
+school = $1
+region = $2
+if [ -z "$school" ] || [ -z "$region" ]
+then
+    echo "Please provide arguments: ./set_header.sh [school name] [region]"
+    echo "Example: ./set_header.sh codam nl"
+    exit
+fi
+
+if [ ! -z "$SCHOOL" ]
+then
+    echo "SCHOOL="$school"" >> ~/.zshrc
+    echo "export SCHOOL" >> ~/.zshrc
+fi
+
 if [ ! -z "$USER" ]
 then
     echo "USER=`/usr/bin/whoami`" >> ~/.zshrc
@@ -17,7 +32,7 @@ fi
 
 if [ ! -z "$MAIL" ]
 then
-    echo "MAIL="$USER@student.42.fr"" >> ~/.zshrc
+    echo "MAIL="$USER@student.$school.$region"" >> ~/.zshrc
     echo "export MAIL" >> ~/.zshrc
 fi
 

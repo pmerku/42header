@@ -8,6 +8,16 @@ let s:asciiart = [
 			\"    ###   ########.fr    "
 			\]
 
+let s:codam = [
+			\"         ::::::::        ",
+			\"       :+:    :+:        ",
+			\"      +:+                ",
+			\"     +#+                 ",
+			\"    +#+                  ",
+			\"  #+#    #+#             ",
+			\"   ########   odam.nl    "
+			\]
+
 let s:start		= '/*'
 let s:end		= '*/'
 let s:fill		= '*'
@@ -30,7 +40,9 @@ let s:types		= {
 			\'\.el$\|\emacs$':
 			\[';', ';', '*'],
 			\'\.f90$\|\.f95$\|\.f03$\|\.f$\|\.for$':
-			\['!', '!', '/']
+			\['!', '!', '/'],
+			\'\.s$\|\.asm$':
+			\[';', ';', ';']
 			\}
 
 function! s:filetype()
@@ -51,7 +63,16 @@ function! s:filetype()
 endfunction
 
 function! s:ascii(n)
-	return s:asciiart[a:n - 3]
+	let l:school = $SCHOOL
+	if exists('g:school')
+		l:school = g:school
+	endif
+	
+	if strlen(l:school) == 0
+		return s:asciiart[a:n - 3]
+	elseif tolower(l:school) == "codam"
+		return s:codam[a:n - 3]
+	endif
 endfunction
 
 function! s:textline(left, right)

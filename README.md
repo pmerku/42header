@@ -1,30 +1,34 @@
 # **42 Header**
 
 42 (Paris)
+Codam (Amsterdam)
 
 ### **Description**
 
-42 standard header for vim editor.
+42 or Codam standard header for vim editor.
 
 ![42 header](img/42header.jpg)
+![Codam header](img/codam_header.jpg)
 
 ### **UNIX Setup**
 
 Copy `stdheader.vim` in your `~/.vim/plugin`, or use your favorite plugin
-manager. Then set the user and mail variables as explained below.
+manager. Then set the user, mail and school variables as explained below.
 
-#### Option 1: export USER and MAIL in your shell configuration file
+#### Option 1: export USER, MAIL and SCHOOL in your shell configuration file
 
 Add in `~/.zshrc` your:
 
 + `USER`
 + `MAIL`
++ `SCHOOL`
 
-#### Option 2: set user and mail values directly in your vimrc
+#### Option 2: set user, mail and school values directly in your vimrc
 
 ```vim
 let g:user42 = 'yourLogin'
 let g:mail42 = 'yourLogin@student.42.fr'
+let g:school = 'yourSchoolName'
 ```
 
 ### **Usage**
@@ -37,9 +41,9 @@ For **Terminator**, right click -> Preferences -> Shortcuts -> change help with 
 
 ### **Note**
 
-Inside the **42 clusters** you can easily run:
+Inside the **clusters** you can easily run:
 
-`$ ./set_header.sh`
+`$ ./set_header.sh [schoolname] [region]`
 
 ### **Credits**
 
