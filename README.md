@@ -28,7 +28,7 @@ Add in `~/.zshrc` your:
 ```vim
 let g:user42 = 'yourLogin'
 let g:mail42 = 'yourLogin@student.42.fr'
-let g:school = 'yourSchoolName'
+let g:school42 = 'yourSchoolName'
 ```
 
 ### **Usage**

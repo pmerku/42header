@@ -64,8 +64,8 @@ endfunction
 
 function! s:ascii(n)
 	let l:school = $SCHOOL
-	if exists('g:school')
-		l:school = g:school
+	if exists('g:school42')
+		l:school = g:school42
 	endif
 	
 	if strlen(l:school) == 0
